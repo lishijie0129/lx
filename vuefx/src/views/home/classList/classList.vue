@@ -7,14 +7,9 @@
             <li :class="{active:ind===3}"  @click="clicks(3)">完本</li>
         </ul>
          <div>
-             <dl v-for="(item,index) in newList" :key="index">
-                 <dt></dt>
-                 <dd>
-                     <li>{{item.bookName}}</li>
-                     <li>{{item.authorName}}</li>
-                     <li>{{item.description}}</li>
-                 </dd>
-             </dl>
+             <Item v-for="(item,index) in newList" :key="index" :item="item">
+                 
+             </Item>
         </div>
     </div>
    
@@ -23,6 +18,7 @@
 <script>
 import axios from 'axios'
 import '@/mock/index.js'
+import Item from '@/components/item.vue'
 export default {
     name:"classList",
     data(){
@@ -31,6 +27,9 @@ export default {
             newList:[],
             list:[]
         }
+    },
+    components:{
+        Item
     },
     created(){
         axios.get("/data/list").then(res=>{
@@ -68,25 +67,5 @@ export default {
 .list-box .active{
     background: #f00;
     color: #fff;
-}
-dl{
-    display: flex;
-    width: 100%;
-    height:150px;
-    margin-top: 15px;
-}
-dt{
-    width: 30%;
-    height: 100%;
-    border: 1px solid #ccc;
-}
-dd{
-    width: 70%;
-    height: 100%;
-}
-dd li{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 </style>

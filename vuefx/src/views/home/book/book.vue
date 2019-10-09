@@ -1,6 +1,6 @@
 <template>
     <div id="book">
-        book
+       boox
     </div>
 </template>
 
