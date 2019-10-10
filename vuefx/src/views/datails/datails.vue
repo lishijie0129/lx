@@ -11,13 +11,18 @@
 
 <script>
 import Item from '@/components/item.vue'
+import {mapMutations} from 'vuex'
 export default {
     name:"datails",
     components:{
         Item
     },
-    methods:{
+    methods:{ 
+        ...mapMutations(['Data']),
         clicks(obj){
+            
+            
+            this.Data(obj)
             this.$router.push({
                 name:"book"
             })

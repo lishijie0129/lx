@@ -1,12 +1,18 @@
 <template>
     <div id="book">
-       boox
+      
+       <Item v-for="(item,index) in $store.state.newData"  :key="index" :item="item">
+       </Item>
     </div>
 </template>
 
 <script>
+import Item from '@/components/item.vue'
 export default {
-    name:"book"
+    name:"book",
+    components:{
+        Item
+    }
 }
 </script>
 
