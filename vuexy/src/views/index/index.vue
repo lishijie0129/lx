@@ -4,7 +4,10 @@
             <router-view/>
         </div>
         <footer>
-            123
+            <dl v-for="(ele,index) in footData" :key="index" :class="{active:index==ind}" @click="clicks(index)">
+                <dt><img :src="index==ind?require('@/img/'+ele.active):require('@/img/'+ele.img)" alt=""></dt>
+                <dd>{{ele.txt}}</dd>
+            </dl>
         </footer>
     </div>
 </template>
@@ -14,6 +17,7 @@ export default {
     name:"index",
     data(){
         return {
+            ind:0,
             footData:[
                 {
                     txt: "首页",
@@ -43,7 +47,12 @@ export default {
         }
     },
     methods:{
-
+        clicks(ind){
+            this.ind=ind;
+            this.$router.push({
+                path:this.footData[ind].url
+            })
+        }
     }
 }
 </script>
@@ -52,14 +61,28 @@ export default {
     .index{
         width: 100%;
         height: 100%;
+        overflow: hidden
     }
     .index>div{
         flex: 1;
+        overflow: auto;
     }
     footer{
+        display: flex;
         height: 44px;
         width: 100%;
-        line-height: 44px;
+        font-size: 14px;
         border-top: 1px solid #ccc;
+    }
+    footer dl{
+        flex: 1;
+        text-align: center;
+     
+    }
+    footer dl dt img{
+        width: 20px;
+    }
+    footer .active{
+        color: #f00;
     }
 </style>

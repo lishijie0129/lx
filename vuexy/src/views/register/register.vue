@@ -1,18 +1,18 @@
 <template>
-    <div class="login">
-        <ul class="login-ul">
-            <h3>登录</h3>
+    <div class="register">
+        <ul class="register-ul">
+            <h3>注册</h3>
             <li><input type="text" placeholder="用户名" v-model="phone"></li>
             <li><input type="password" placeholder="密码" v-model="pwd"></li>
-            <li><button @click="clicks">登录</button></li>
+            <li><button @click="clicks">注册</button></li>
         </ul>
     </div>
 </template>
 
 <script>
-import {login} from '@/api/api'
+import {register} from '@/api/api'
 export default {
-    name:'login',
+    name:'register',
     data(){
         return {
             phone:"",
@@ -21,20 +21,17 @@ export default {
     },
     methods:{
         async clicks(){
-           try {
-                let res= await login({phone:this.phone,password:this.pwd})
-               // console.log(res);
+            try {
+                const res=await register({phone:this.phone,password:this.pwd})
+                // console.log(res); 
                 if(res.data.code==1){
-                    window.localStorage.texts=res.data.data.token; 
-                    this.$router.push({path:this.$route.query.redirect})
+                    this.$router.go(-1)
                 }
-           } catch (e) {
-                if(e.response.data.code==0){
-                    //  console.log(e.response.data);
-                    this.$router.push({path:"/register"})
-                }
-           } 
-          
+            } catch (e) {
+               if(e.response.data.code==0){
+                   alert(e.response.data.msg)
+               } 
+            }
            
         }
     }
@@ -42,7 +39,7 @@ export default {
 </script>
 
 <style>
-    .login-ul{
+    .register-ul{
         margin: 0 auto;
     }
     input{

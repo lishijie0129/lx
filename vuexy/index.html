@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+        <div id="course">
+
+                <video id="screen" width="640" src="video/art.mp4" controls autoplay>
+                    对不起，您的浏览器不支持html5视频。
+                </video>
+        
+                <ul>
+                    <li>
+                        <h3>欧洲简史</h3>
+                    </li>
+                    <hr />
+                    <li onclick="playCourse(60)">
+                        <img src="image/play.png">
+                        <span>早期基督美术建筑</span>
+                    </li>
+                    <hr />
+                    <li onclick="playCourse(120)">
+                        <img src="image/play.png">
+                        <span>早期基督美术之绘画</span>
+                    </li>
+                    <hr />
+                    <li onclick="playCourse(220)">
+                        <img src="image/play.png">
+                        <span>早期基督美术之绘画；拜占庭美术</span>
+                    </li>
+                    <hr />
+                    <li onclick="playCourse(320)">
+                        <img src="image/play.png">
+                        <span>早期基督美术绘画；镶嵌画</span>
+                    </li>
+                    <hr />
+                    <li onclick="playCourse(420)">
+                        <img src="image/play.png">
+                        <span>早期基督美术绘画；罗马式美术</span>
+                    </li>
+                    <hr />
+                </ul>
+        
+            </div>
+            <script>
+   
+                    var screen = document.getElementById("screen");
+                    
+                            function playCourse(time) {
+                                console.log(time);
+                                
+                                screen.currentTime=time;
+                                //继续播放视频
+                                screen.play();
+                            }
+                         
+                    </script>
+</body>
+</html>
+<!-- <html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>在线课程学习</title>
+    <link rel="stylesheet" href="css/course.css">
+</head>
+
+<body>
+    <div id="course">
+
+        <video id="screen" width="640" src="video/art.mp4" controls autoplay>
+            对不起，您的浏览器不支持html5视频。
+        </video>
+
+        <ul>
+            <li>
+                <h3>欧洲简史</h3>
+            </li>
+            <hr />
+            <li onclick=playcourse(60)>
+                <img src="image/play.png">
+                <span>早期基督美术建筑</span>
+            </li>
+            <hr />
+            <li onClick="playcourse(120)">
+                <img src="image/play.png">
+                <span>早期基督美术之绘画</span>
+            </li>
+            <hr />
+            <li onClick="playcourse(220)">
+                <img src="image/play.png">
+                <span>早期基督美术之绘画；拜占庭美术</span>
+            </li>
+            <hr />
+            <li onClick="playcourse(320)">
+                <img src="image/play.png">
+                <span>早期基督美术绘画；镶嵌画</span>
+            </li>
+            <hr />
+            <li onClick="playcourse(420)">
+                <img src="image/play.png">
+                <span>早期基督美术绘画；罗马式美术</span>
+            </li>
+            <hr />
+        </ul>
+
+    </div>
+    <script>
+   
+    var screen = document.getElementById("screen");
+    
+            function playCourse() {
+                console.log(1);
+                
+                // screen.currentTime=time;
+                // //继续播放视频
+                // screen.play();
+            }
+         
+    </script>
+</body>
+
+</html> -->
