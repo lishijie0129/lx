@@ -32,7 +32,6 @@ export default {
         },
         async goToShop(id){
             console.log(id);
-            
             let res=await getUserInfo();
             let user=res.data.data.uid
             let addRes=await addCar({user_id:user,shop_id:id})

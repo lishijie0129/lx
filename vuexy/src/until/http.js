@@ -3,7 +3,7 @@ let newAxios=axios.create()
 // 添加请求拦截器
 newAxios.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
-    config.headers["Authorization"]=window.localStorage.texts
+    config.headers["Authorization"]=window.localStorage.texts//把本地存储登录的账号texts放到请求头
     // console.log(config,"请求");
     
     return config;
