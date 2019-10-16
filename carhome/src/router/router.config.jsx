@@ -1,8 +1,38 @@
-import Index from '../view/index/index'
-import Login from '../view/login/login'
-import Search from '../view/search/search'
-import Home from '../view/index/home/home'
-import Car from '../view/index/car/car'
+import React from 'react'
+import Loadable from 'react-loadable'
+// import Index from '../view/index/index'
+// import Login from '../view/login/login'
+// import My from '../view/my/my'
+// import Search from '../view/search/search'
+// import Home from '../view/index/home/home'
+// import Car from '../view/index/car/car'
+function Loading(){
+    return <div>loading.......</div>
+}
+let Index=Loadable({
+    loader:()=>import('@/view/index/index'),
+    loading:Loading
+})
+let Login=Loadable({
+    loader:()=>import('@/view/login/login'),
+    loading:Loading
+})
+let My=Loadable({
+    loader:()=>import('@/view/my/my'),
+    loading:Loading
+})
+let Search=Loadable({
+    loader:()=>import('@/view/search/search'),
+    loading:Loading
+})
+let Home=Loadable({
+    loader:()=>import('@/view/index/home/home'),
+    loading:Loading
+})
+let Car=Loadable({
+    loader:()=>import('@/view/index/car/car'),
+    loading:Loading
+})
 const routerConfig=[
     {
         type:"route",
@@ -18,6 +48,11 @@ const routerConfig=[
                 type:'route',
                 path:"/index/car",
                 component:Car
+            },
+            {
+                type:"redirect",
+                from:"/index",
+                to:"/index/home"
             }
         ]
     },
@@ -32,9 +67,14 @@ const routerConfig=[
         component:Search
     },
     {
+        type:"route",
+        path:"/my",
+        component:My
+    },
+    {
         type:"redirect",
         from:"/",
-        to:"/index/home"
+        to:"/index"
     }
 ]
 export default routerConfig
