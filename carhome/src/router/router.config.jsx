@@ -33,6 +33,10 @@ let Car=Loadable({
     loader:()=>import('@/view/index/car/car'),
     loading:Loading
 })
+let Addre=Loadable({
+    loader:()=>import('@/view/index/addre/addre'),
+    loading:Loading
+})
 const routerConfig=[
     {
         type:"route",
@@ -48,6 +52,11 @@ const routerConfig=[
                 type:'route',
                 path:"/index/car",
                 component:Car
+            },
+            {
+                type:'route',
+                path:"/index/addre",
+                component:Addre
             },
             {
                 type:"redirect",

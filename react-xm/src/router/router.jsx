@@ -1,0 +1,10 @@
+import React from 'react'
+import {BrowserRouter} from 'react-router-dom'
+import Routes from "./routes"
+import RouterView from './routerView'
+function Router(){
+    return <BrowserRouter>
+        <RouterView routes={Routes}/>
+    </BrowserRouter>
+}
+export default Router

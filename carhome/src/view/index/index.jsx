@@ -11,7 +11,8 @@ class Index extends React.Component{
                 url:"/index/car"
               
             },{
-                txt:"论坛"
+                txt:"论坛",
+                url:"/index/addre"
             },{
                 txt:"二手车"
             },{

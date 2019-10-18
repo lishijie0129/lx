@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    height: 44px;
+    line-height: 44px;
+    border: 1px solid #ccc;
+    justify-content: space-between;
+    background: #f00;
+    color: #fff;
+}
+h4{ 
+    flex: 1;
+    text-align: center;
+}

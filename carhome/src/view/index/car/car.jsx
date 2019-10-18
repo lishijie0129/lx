@@ -20,6 +20,8 @@ class Car extends React.Component{
     }
     render(){
         let {list}=this.state;
+        console.log(this.props);
+        
         return <div className="car">
             {
                 Object.keys(list&&list).map((item,i)=>{

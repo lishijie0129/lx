@@ -22,6 +22,7 @@ class Login extends React.Component{
     } 
     render(){
         let {text,pwd}=this.state
+      
        
         return <div>
             登录

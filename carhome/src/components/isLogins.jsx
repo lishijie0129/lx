@@ -7,7 +7,7 @@ function isLogins(My){
       }
       render(){
         let {isgo}=this.state
-        return isgo?<My />:null
+      return isgo?<My {...this.props}/>:null
       }
       componentDidMount(){
         if(window.localStorage.user){

@@ -1,0 +1,43 @@
+.tits{
+    display: flex;
+    height: 30px;
+    line-height: 30px;
+    justify-content: center;
+    ul{
+        display: flex;
+        border: 1px solid #f00;
+        li{
+            padding:0 10px;
+        }
+    }
+}
+.cons{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    dl{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        margin-top: 10px;
+        dt{
+            width: 80px;
+            height: 100%;
+            border: 1px solid #ccc;
+        }
+        dd {
+            flex: 1;
+            line-height:30px ;
+        }
+        dd li{
+            width: 100%;
+            
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+.active{
+    background: #f00;
+    color: #fff;
+}
