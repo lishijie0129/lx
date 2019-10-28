@@ -1,0 +1,9 @@
+<!--component/left/left.wxml-->
+<view class="left">
+    <view wx:for="{{list}}"
+    wx:key="{{index}}" 
+    class="{{ind===index?'active':''}}"
+    data-ind="{{index}}"
+    bindtap="goclick"
+    >{{item.txt}}</view>
+  </view>

@@ -1,0 +1,124 @@
+[
+    {
+        "txts":"女装",
+        "children":[
+            {
+                "name":"夏热卖",
+                "child":[
+                    {   
+                        "title":"单间套装2019",
+                        "pic":20,
+                        "url":"1.jpg",
+                        "id":0
+,
+"num":0                    },
+                    {
+                        "title":"单间套装2018",
+                        "pic":50,
+                        "url":"1.jpg",
+                        "id":1
+,
+"num":0                    },
+                    {
+                        "title":"单间套装20193",
+                        "pic":60,
+                        "url":"1.jpg",
+                        "id":2
+,
+"num":0                    },
+                    {
+                        "title":"单间套装夏季23",
+                        "pic":20,
+                        "url":"1.jpg",
+                        "id":3
+,
+"num":0                    },
+                    {
+                        "title":"单间018",
+                        "pic":50,
+                        "url":"1.jpg",
+                        "id":4
+,
+"num":0                    },
+                    {
+                        "title":"单间93",
+                        "pic":60,
+                        "url":"1.jpg",
+                        "id":5
+,
+"num":0                    },
+                    {
+                        "title":"单间3",
+                        "pic":20,
+                        "url":"1.jpg",
+                        "id":6
+,
+"num":0                    }
+            
+                ]
+            }
+        ]
+
+    },
+    {
+        "txts":"T恤",
+        "children":[
+            {
+                "name":"夏热卖",
+                "child":[
+                    {
+                        "title":"T恤套装2019",
+                        "pic":20,
+                        "url":"1.jpg",
+                        "id":7
+,
+"num":0                    },
+                    {
+                        "title":"T恤套装2018",
+                        "pic":50,
+                        "url":"1.jpg",
+                        "id":8
+,
+"num":0                    },
+                    {
+                        "title":"T恤套装20193",
+                        "pic":60,
+                        "url":"1.jpg",
+                        "id":9
+,
+"num":0                    },
+                    {
+                        "title":"T恤套装夏季23",
+                        "pic":20,
+                        "url":"1.jpg",
+                        "id":10,
+                        "num":0
+                    },
+                    {
+                        "title":"T恤018",
+                        "pic":50,
+                        "url":"1.jpg",
+                        "id":11,
+                        "num":0
+                    },
+                    {
+                        "title":"T恤93",
+                        "pic":60,
+                        "url":"1.jpg",
+                        "id":12,
+                        "num":0
+                    },
+                    {
+                        "title":"T恤3",
+                        "pic":20,
+                        "url":"1.jpg",
+                        "id":13,
+                        "num":0
+                    }
+            
+                ]
+            }
+        ]
+
+    }
+]

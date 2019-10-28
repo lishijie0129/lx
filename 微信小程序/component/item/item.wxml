@@ -1,0 +1,4 @@
+<!--component/item/item.wxml-->
+<view>
+  {{items.txt}}
+</view>

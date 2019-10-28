@@ -1,0 +1,85 @@
+.App {
+    width: 100%;
+    height: 100%;  
+}
+.index{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%; 
+}
+.top{
+    display: flex;
+    height: 45px;
+    line-height: 45px;
+    width: 100%;
+    border-bottom:1px solid #ccc ;
+}
+.index>li{
+    height: 45px;
+    width: 100%;
+    border-top:1px solid #ccc ;
+}
+.top li{
+    flex: 1;
+    text-align: center;
+}
+.index>div{
+    flex: 1;
+    
+}
+.diCan{
+    display: flex;
+    width: 100%;
+    height: 100%;
+   
+}
+.left{
+    width: 130px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
+.left li{
+    height: 44px;
+    line-height: 44px;
+    border: 1px solid #ccc;
+}
+.left li.active{
+    color: #f00;
+}
+.right{
+    flex: 1;
+    overflow: hidden;
+}
+.right>div dl{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 5px;
+}
+.right>div dl dt img,.box dl dt img{
+    height: 80px;
+    width: 80px;
+}
+.right>div dl dd li,.box dl dd li{
+    display: flex;
+    justify-content: space-between;
+}
+.index>li{
+    position: relative;
+}
+.box{
+    position: absolute;
+    left: 0;
+    bottom: 45px;
+    width: 100%;
+    height: 300px;
+    background: #ccc;
+    overflow: auto;
+}
+.box dl{
+    display: flex;
+    width: 100%;
+    height: 80px;
+}

@@ -1,0 +1,14 @@
+<!--pages/inputs/inputs.wxml-->
+<view>
+  <item items="{{list[ind]}}"></item>
+  <view wx:for="{{list[ind].children}}" wx:for-item="ele" wx:key="index">
+      <radio-group class="radio-group" bindchange="radioChange" >
+        <radio class="radio"  wx:key="index" value="{{ele.name}}" checked="{{ele.flag}}">
+            <text>{{ele.name}}</text>
+        </radio>
+      </radio-group>
+  </view>
+  <button wx:if="{{ind>0}}" data-ind="{{ind}}" data-isn="{{false}}" bindtap="clicks">上一题</button>
+  <button data-ind="{{ind}}" data-isn="{{true}}" bindtap="clicks"
+  >下一题</button>
+</view>

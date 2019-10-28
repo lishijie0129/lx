@@ -1,0 +1,17 @@
+<!--pages/list/list.wxml-->
+<!-- if else if else -->
+<view>
+  <text wx:if="{{flag>60}}">优秀</text>
+  <text wx:elif="{{flag<60}}">还行</text>
+</view>
+<!-- hidden 是否隐藏 true是  false不是-->
+<view hidden="{{isflag}}">
+12
+</view>
+<!-- 循环 -->
+<view wx:for="{{list}}" wx:for-item="ele" wx:for-index="i">
+  {{ele.txt}}{{i}}
+</view>
+<view>
+  {{aa+bb}}
+</view>

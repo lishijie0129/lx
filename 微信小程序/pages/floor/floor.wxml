@@ -1,0 +1,21 @@
+<!--pages/floor/floor.wxml-->
+<view class="floor">
+    <view class="left">
+      <view wx:for="{{goods}}"
+       class="{{index===ind?'active':''}}" 
+       wx:key="{{i}}"
+       data-ind="{{index}}"
+       bindtap="clicks"
+       >{{item.name}}</view>
+    </view>
+    <scroll-view class="right" scroll-y >
+    
+      <view class="cons" wx:for="{{goods}}"  wx:key="{{index}}" >
+          <view class="h4">{{item.name}}</view>
+          <view wx:for="{{item.foods}}" wx:for-item="ele" wx:for-index="i" wx:key="{{i}}">
+            <image src="{{ele.image}}"></image>
+            <view>{{ele.name}}</view>
+          </view>
+      </view>
+    </scroll-view>
+</view>
